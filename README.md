@@ -5,6 +5,12 @@ pip install -e .
 python -c 'import cyext'
 ```
 
+Or:
+
+```
+make
+```
+
 The output is:
 
 ```
