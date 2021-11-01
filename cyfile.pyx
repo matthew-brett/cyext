@@ -18,6 +18,14 @@ def one_c128():
     print(output[0])
 
 
+def one_c256():
+    cdef:
+        cnp.ndarray[cnp.npy_complex256] output
+
+    output = np.array([1 + 1j], dtype=np.complex256)
+    print(output[0])
+
+
 def one_clong_double():
     cdef:
         cnp.ndarray[cnp.clongdouble_t] output
@@ -36,5 +44,6 @@ def one_long_double_complex():
 
 one_long_double()
 one_c128()
+one_c256()
 one_clong_double()
 one_long_double_complex()
