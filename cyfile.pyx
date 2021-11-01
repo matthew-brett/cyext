@@ -42,8 +42,13 @@ def one_long_double_complex():
     print(output[0])
 
 
+print('long double')
 one_long_double()
+print('c128')
 one_c128()
+print('c256')
 one_c256()
+print('clongdouble')
 one_clong_double()
+print('long double complex')
 one_long_double_complex()
