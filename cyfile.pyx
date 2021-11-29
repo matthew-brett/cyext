@@ -2,8 +2,12 @@ import numpy as np
 cimport numpy as cnp
 
 
-def my_func(cnp.ndarray[cnp.npy_longdouble] output):
-    return np.sum(output)
+ctypedef fused DTYPE_floating_t:
+    long double
+
+
+def my_func(DTYPE_floating_t [:] arr):
+    return np.sum(arr)
 
 
 x = np.ones(4, np.longdouble)
