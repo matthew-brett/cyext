@@ -10,7 +10,7 @@ jobs:
       - name: set-msys2-dir
         shell: pwsh
         run: |
-          echo 'msys2_dir="c:\msys64"' | Out-File -FilePath $env:GITHUB_ENV -Append
+          echo 'msys2_dir="c:\msys64"' >> $env:GITHUB_ENV
       - name: show-msys2-dir
         run: |
           echo "env:msys2_dir is ${env:msys2_dir}"
