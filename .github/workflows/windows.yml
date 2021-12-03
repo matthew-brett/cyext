@@ -7,14 +7,13 @@ jobs:
   test:
     runs-on: windows-latest
     steps:
-      - name: set-msys2-dir
-        shell: pwsh
+      - name: mkdir
         run: |
-          echo "msys2_dir=c:\msys64" >> $env:GITHUB_ENV
-      - name: show-msys2-dir
+          mkdir tmp
+      - name: cd
         run: |
-          echo "env:msys2_dir is ${env:msys2_dir}"
-          echo "env:msys2_dir no brackets is $env:msys2_dir"
-          echo "env.msys2_dir is ${{env.msys2_dir}}"
-          echo "env.msys2_dir with spaces is ${{ env.msys2_dir }}"
-          echo "msys2_dir is ${msys2_dir}"
+          cd tmp
+          echo "wd is $PWD"
+      - name: and-now
+        run: |
+          echo "Now wd is $PWD"
